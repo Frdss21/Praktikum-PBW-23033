@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NgopiYuk - Kopi Premium Nusantara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-[#fefae0] text-[#3e2723]">
+
+  <!-- Floating Cart Button -->
+  <button id="cart-btn" class="fixed bottom-8 right-8 bg-yellow-500 text-white p-4 rounded-full shadow-lg hover:bg-yellow-400 transition z-50">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-2 py-1">0</span>
+  </button>
+
+  <!-- Navbar -->
+  <header class="bg-[#6d4c41] text-white sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-tight">NgopiYuk</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:text-yellow-300 transition">Beranda</a></li>
+          <li><a href="#products" class="hover:text-yellow-300 transition">Produk</a></li>
+          <li><a href="#description" class="hover:text-yellow-300 transition">Tentang</a></li>
+          <li><a href="#contact" class="hover:text-yellow-300 transition">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen bg-cover bg-center bg-fixed text-white flex items-center justify-center text-center px-4" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');">
+    <div class="bg-black bg-opacity-70 p-8 rounded-xl animate-fade-in">
+      <h2 class="text-5xl md:text-6xl font-extrabold mb-4">Ngopi Yuk?</h2>
+      <p class="text-xl md:text-2xl mb-6 text-yellow-200">Temukan kenikmatan sejati dalam setiap tegukan kopi Nusantara</p>
+      <a href="#products" class="bg-yellow-500 hover:bg-yellow-400 text-[#3e2723] px-8 py-3 rounded-full text-lg font-bold transition shadow-lg">Lihat Menu</a>
+    </div>
+  </section>
+
+  <!-- Produk Section -->
+  <section id="products" class="py-20 bg-[#fff3e0]">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-12">Menu Minuman</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-transform transform hover:-translate-y-2">
+          <img src="Espresso Coffee.jpg" alt="Espresso" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h4 class="text-xl font-semibold mb-2">Espresso</h4>
+            <p class="text-sm mb-4">Rasa kuat dengan aroma khas. Pilihan klasik untuk pecinta kopi sejati.</p>
+            <button class="buy-btn bg-yellow-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" data-item="Espresso">Beli Sekarang</button>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-transform transform hover:-translate-y-2">
+          <img src="Latte Coffee.jpg" alt="Latte" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h4 class="text-xl font-semibold mb-2">Latte</h4>
+            <p class="text-sm mb-4">Kombinasi espresso dan susu, lembut dan nikmat di setiap tegukan.</p>
+            <button class="buy-btn bg-yellow-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" data-item="Latte">Beli Sekarang</button>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-transform transform hover:-translate-y-2">
+          <img src="Cappuccino Coffee.jpg" alt="Cappuccino" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h4 class="text-xl font-semibold mb-2">Cappuccino</h4>
+            <p class="text-sm mb-4">Favorit milenial dengan perpaduan rasa manis dan gurih.</p>
+            <button class="buy-btn bg-yellow-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition" data-item="Kopi Susu Gula Aren">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Kami Section -->
+  <section id="description" class="py-20 bg-[#fbe9e7]">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-4xl font-bold mb-6 animate-slide-up">Tentang NgopiYuk</h3>
+      <div class="flex flex-col md:flex-row items-center md:space-x-10">
+        <div class="md:w-1/2 mb-6 md:mb-0">
+          <img src="NgopiYuk.png" alt="NgopiYuk" class="rounded-xl shadow-lg w-full">
+        </div>
+        <div class="md:w-1/2 text-left">
+          <p class="text-lg text-[#5d4037] leading-relaxed">
+            <strong>NgopiYuk</strong> adalah tempat berkumpulnya para pecinta kopi sejati yang ingin menikmati sajian kopi Nusantara dengan rasa autentik dan suasana hangat.
+            Kami menyajikan kopi pilihan terbaik dari berbagai daerah Indonesia, dengan teknik penyeduhan yang memperhatikan setiap detail cita rasa.
+          </p>
+          <p class="text-lg text-[#5d4037] leading-relaxed mt-4">
+            Kami percaya bahwa setiap tegukan kopi dapat menjadi pengalaman yang menyenangkan, membawa kenangan, dan menciptakan inspirasi. Selamat datang di <strong>NgopiYuk</strong> — lebih dari sekadar kopi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak Section -->
+  <section id="contact" class="min-h-screen bg-cover bg-center bg-fixed flex items-center justify-center text-center px-4" style="background-image: url('https://images.unsplash.com/photo-1517935706611-6a1e0654c951');">
+    <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg max-w-lg w-full animate-fade-in">
+      <h2 class="text-4xl font-extrabold mb-6 text-[#3e2723]">Hubungi Kami</h2>
+      <p class="text-lg mb-8 text-[#5d4037]">Kirim pesan Anda untuk memesan kopi atau bertanya lebih lanjut tentang NgopiYuk!</p>
+      <form id="contact-form" class="space-y-6">
+        <div>
+          <input type="text" id="name" placeholder="Nama Anda" required class="w-full p-3 rounded border border-yellow-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        </div>
+        <div>
+          <input type="email" id="email" placeholder="Email Anda" required class="w-full p-3 rounded border border-yellow-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        </div>
+        <div>
+          <textarea id="message" placeholder="Pesan Anda" rows="5" required class="w-full p-3 rounded border border-yellow-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-yellow-400 text-[#4e342e] p-3 rounded font-bold hover:bg-yellow-300 transition">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#3e2723] text-white py-6">
+    <div class="container mx-auto text-center text-sm">
+      <p>© 2025 NgopiYuk. Semua hak dilindungi.</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="#" class="hover:text-yellow-300"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-yellow-300"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="order-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center">
+      <h3 class="text-2xl font-bold mb-4">Pesanan Anda</h3>
+      <p id="modal-message" class="mb-6">Terima kasih telah memesan!</p>
+      <button id="close-modal" class="bg-yellow-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition">Tutup</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

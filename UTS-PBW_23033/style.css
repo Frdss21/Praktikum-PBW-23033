@@ -1,0 +1,116 @@
+/* style.css */
+body {
+  scroll-behavior: smooth;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#home, #contact {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#gallery img {
+  transition: transform 0.3s ease;
+}
+
+#order-modal {
+  transition: opacity 0.3s ease;
+}
+
+#order-modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+#cart-btn {
+  transition: all 0.3s ease;
+}
+
+#cart-btn:hover {
+  transform: scale(1.1);
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+  #home, #contact {
+    background-attachment: scroll;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  #description .desc-image {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Tentang Section */
+#description p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+#description img.desc-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Extra bounce animation */
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s ease-out forwards;
+}
+
+/* Produk gambar tidak terpotong */
+#products img {
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
